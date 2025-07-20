@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
+import Header from "./Header";
 
 const HeroSection = () => {
   const scrollToCategories = () => {
@@ -9,6 +10,9 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-gradient-hero text-primary-foreground py-20 px-6 text-center overflow-hidden">
+      {/* Header */}
+      <Header />
+      
       {/* Background Image Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20"
