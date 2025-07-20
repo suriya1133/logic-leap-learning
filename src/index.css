@@ -2,39 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Aptitude Practice Platform Design System
+Focused on learning, achievement, and professional growth
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core neutral colors */
+    --background: 0 0% 98%;
+    --foreground: 215 28% 17%;
 
+    /* Card and surface colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 28% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 28% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary brand - Deep indigo for trust and learning */
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 239 84% 75%;
+    
+    /* Secondary - Lighter indigo for backgrounds */
+    --secondary: 239 84% 95%;
+    --secondary-foreground: 239 84% 40%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Muted colors for subtle elements */
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Bright blue for success and highlights */
+    --accent: 213 93% 68%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Destructive for errors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Border and input styling */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 239 84% 67%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Custom gradients for hero sections */
+    --gradient-hero: linear-gradient(135deg, hsl(239 84% 67%), hsl(252 83% 57%));
+    --gradient-feature: linear-gradient(145deg, hsl(239 84% 95%), hsl(0 0% 100%));
+    
+    /* Shadows with brand color tints */
+    --shadow-soft: 0 4px 12px hsl(239 84% 67% / 0.1);
+    --shadow-medium: 0 8px 24px hsl(239 84% 67% / 0.15);
+    --shadow-strong: 0 12px 36px hsl(239 84% 67% / 0.2);
 
     --radius: 0.5rem;
 
@@ -100,6 +118,12 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
   }
 }
